@@ -6,4 +6,3 @@ license = "MIT"
 
 [dependencies]
 colored = "2.0"
-chrono = "0.4"
