@@ -12,3 +12,13 @@ Cargo.lock
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
+
+# Handle .DS_Store if you are working on a Mac
+.DS_Store
+# Handle Thumbs.db if you are working on a Windows machine
+Thumbs.db
+
+# Handle .vscode if you are using Visual Studio Code
+.vscode/
+# Handle .idea if you are using IntelliJ IDEA
+.idea/
