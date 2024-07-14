@@ -1,5 +1,6 @@
 use colored::*;
 use std::process::Command;
+use which::which;
 
 fn main() {
     let header: String = "Ollama Update Checker".to_string();
@@ -23,11 +24,7 @@ fn main() {
 }
 
 fn is_command_available(command: &str) -> bool {
-    Command::new("which")
-        .arg(command)
-        .output()
-        .map(|output| output.status.success())
-        .unwrap_or(false)
+    which(command).is_ok()
 }
 
 fn get_ollama_models() -> Vec<String> {
